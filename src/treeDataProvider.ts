@@ -39,10 +39,3 @@ export class TreeDataProvider implements vscode.TreeDataProvider<TreeNode> {
         this._onDidChangeTreeData.fire(node);
     }
 }
-
-export function createTestTree(): TreeNode {
-    const level2node1 = new TreeNode('node 1/2/3');
-    const level1node1 = new TreeNode('node 1/2', [level2node1]);
-    const root = new TreeNode('node 1', [level1node1]);
-    return root;
-}
